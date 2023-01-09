@@ -1,0 +1,28 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+model Contract {
+  id             String   @id @default(uuid())
+  djName         String
+  djEmail        String
+  djPhone        String
+  clientName     String
+  clientEmail    String
+  clientPhone    String
+  eventDate      DateTime
+  eventLocation  String
+  music          Boolean
+  lighting       Boolean
+  soundEquipment Boolean
+  fee            Int
+  paymentTerms   String
+}

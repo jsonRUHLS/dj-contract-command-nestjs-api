@@ -32,6 +32,22 @@
 $ yarn install
 ```
 
+## Docker
+
+```bash
+# startup container and db
+$ docker compose up dev-db-dj-contract-command -d
+
+```
+
+## Prisma Schema
+
+```bash
+# initialize or push schema changes
+$ npx prisma db push 
+
+```
+
 ## Running the app
 
 ```bash
